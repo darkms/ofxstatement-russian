@@ -1,4 +1,5 @@
 ofxstatement==0.7.1
+openpyxl==3.0.7
 
 # test deps
 pytest==6.1.2

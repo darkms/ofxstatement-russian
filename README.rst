@@ -15,9 +15,10 @@ structure, that is then formatted into an OFX file.
 
 Supported banks:
 
-* Avangard Bank (http://avangard.ru) plugin 'avangard'
-* Tinkoff Bank (http://tinkoff.ru) plugin 'tinkoff'
-* SberBank (http://sbrf.ru) plugins 'sberbank_csv', 'sberbank_txt'
+* Avangard Bank (https://avangard.ru) plugin 'avangard'
+* Tinkoff Bank (https://tinkoff.ru) plugin 'tinkoff'
+* Tinkoff Investments Broker (https://tinkoff.ru/invest) plugin 'tinkoff_broker_excel'
+* SberBank (https://sbrf.ru) plugins 'sberbank_csv', 'sberbank_txt'
 * AlfaBank (https://www.alfabank.ru) plugin 'alfabank'
 * VTB (https://www.vtb.ru) plugin 'vtb'
 
@@ -31,6 +32,12 @@ Tinkoff
 -------
 
 CSV statement for credit, debit and saving account.
+
+Tinkoff Investments Broker
+-------
+
+Excel statement for investments transactions.
+Note: If you get an error related to missing 'style' - open & save the Excel file and try again.
 
 SberBankCSV
 --------
@@ -83,6 +90,21 @@ account
 currency
         Currency
         (if not set, will be extracted from the first record)
+
+tinkoff_broker_excel
+-------
+
+broker
+        Broker id
+        (default is 'Tinkoff Investments')
+
+account
+        Account id
+        (your currency-specific broker account id, ex: tinkoff broker usd)
+
+currency
+        Currency
+        (only transactions nominated in selected currency would be extracted, other transactions would be skipped)
 
 sberbank_txt
 --------
