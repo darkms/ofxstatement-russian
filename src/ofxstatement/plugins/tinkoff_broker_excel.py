@@ -471,7 +471,7 @@ class TinkoffBrokerExcelPlugin(Plugin):
 
     def get_parser(self, fin):
         if not fin.endswith('.xlsx'):
-            raise f'Invalid report file {file_path}. Expected .xslx'
+            raise f'Invalid report file {fin}. Expected .xslx'
 
         parser = TinkoffBrokerExcelStatementParser(fin, self.settings.get('currency'))
         parser.statement.account_id = self.settings['account']
